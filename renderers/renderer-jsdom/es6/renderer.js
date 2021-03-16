@@ -45,6 +45,7 @@ const getPageContents = function (window, options, originalRoute) {
     } else if (options.renderAfterElementExists) {
       let doc = window.document
       int = setInterval(() => {
+        // 这是就使用doc.querySelector来获取对应的元素了
         if (doc.querySelector(options.renderAfterElementExists)) resolve(captureDocument())
       }, 100)
 
